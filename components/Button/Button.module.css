@@ -1,0 +1,41 @@
+.button {
+  appearance: none;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.primary {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.primary:hover {
+  background-color: tomato;
+}
+
+.secondary {
+  border-color: #ebebeb;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.secondary:hover {
+  background-color: #ebebeb;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
