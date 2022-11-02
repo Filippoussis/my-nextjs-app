@@ -1,8 +1,19 @@
+import { GetStaticProps } from 'next';
+import { FC } from 'react';
 import { Button } from '../components/Button/Button';
 import { Htag } from '../components/Htag/Htag';
 import { Text } from '../components/Text/Text';
 
-export default function Home() {
+import { MenuItem } from '../interfaces/menu.interface';
+
+interface HomeProps {
+  menu: MenuItem[];
+  firstCategory: number;
+}
+
+const Home: FC<HomeProps> = ({ menu }) => {
+  console.log('menu', menu);
+
   return (
     <>
       <Htag tag='h1'>Hello, World!</Htag>
@@ -43,4 +54,24 @@ export default function Home() {
       </Text>
     </>
   );
-}
+};
+
+export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const firstCategory = 0;
+  const res = await fetch(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8',
+    },
+    body: JSON.stringify({ firstCategory }),
+  });
+  const data = await res.json();
+
+  return {
+    props: {
+      menu: data,
+    },
+  };
+};
