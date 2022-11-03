@@ -6,7 +6,7 @@ interface ArrowProps {
   fill?: string;
 }
 
-export const Arrow: FC<ArrowProps> = ({ width = '6', height = '10', fill = '#3B434E' }) => {
+const Arrow: FC<ArrowProps> = ({ width = '6', height = '10', fill = '#3B434E' }) => {
   return (
     <svg
       width={width}
@@ -19,3 +19,5 @@ export const Arrow: FC<ArrowProps> = ({ width = '6', height = '10', fill = '#3B4
     </svg>
   );
 };
+
+export default Arrow;

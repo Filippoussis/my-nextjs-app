@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import cn from 'classnames';
 import { ButtonProps } from './Button.props';
-import { Arrow } from '../Icons/Arrow/Arrow';
+import { ArrowIcon } from '../Icons';
 
 import styles from './Button.module.css';
 
@@ -15,7 +15,7 @@ export const Button: FC<ButtonProps> = ({ children, appearance, icon }) => {
       })}
     >
       {children}
-      {icon && <Arrow />}
+      {icon && <ArrowIcon />}
     </button>
   );
 };

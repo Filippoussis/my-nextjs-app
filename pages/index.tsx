@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { Button } from '../components/Button/Button';
 import { Htag } from '../components/Htag/Htag';
 import { Text } from '../components/Text/Text';
+import { BooksIcon, CoursesIcon, ProductsIcon, ServicesIcon } from '../components/Icons';
 
 import { MenuItem } from '../interfaces/menu.interface';
 
@@ -52,6 +53,12 @@ const Home: FC<HomeProps> = ({ menu }) => {
         зачем загонять специалиста в душный офис. В этой профессии важным считается вдохновение,
         поэтому дизайнеры ищут его в разных местах.
       </Text>
+      <div>
+        <CoursesIcon />
+        <ServicesIcon />
+        <BooksIcon />
+        <ProductsIcon />
+      </div>
     </>
   );
 };
@@ -60,18 +67,18 @@ export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
   const firstCategory = 0;
-  const res = await fetch(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
+  const menuFetchResponse = await fetch(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
     },
     body: JSON.stringify({ firstCategory }),
   });
-  const data = await res.json();
+  const menu = await menuFetchResponse.json();
 
   return {
     props: {
-      menu: data,
+      menu,
     },
   };
 };
