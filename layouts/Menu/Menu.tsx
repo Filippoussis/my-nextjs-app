@@ -1,7 +1,8 @@
-import { FC } from 'react';
-import { BooksIcon, CoursesIcon, GoodsIcon, ServicesIcon } from '../Icons';
+import { FC, useContext } from 'react';
+import { BooksIcon, CoursesIcon, GoodsIcon, ServicesIcon } from '../../components/Icons';
 import { FirstLevelMenuItem, MenuItem } from '../../interfaces/menu.interface';
 import { TopLevelCategory } from '../../interfaces/page.interface';
+import { AppContext } from '../../services/context/app.context';
 
 const firstLevelMenu: FirstLevelMenuItem[] = [
   {
@@ -30,7 +31,10 @@ const firstLevelMenu: FirstLevelMenuItem[] = [
   },
 ];
 
-export const Menu = () => {
+const Menu: FC = () => {
+  const { menu, firstCategoty } = useContext(AppContext);
+  console.log('menu', menu);
+
   const buildFirstLevel = () => {
     const items = firstLevelMenu.map((el) => {
       <div key={el.route}>
@@ -45,5 +49,7 @@ export const Menu = () => {
     return items;
   };
 
-  return buildFirstLevel();
+  return <>{buildFirstLevel()}</>;
 };
+
+export default Menu;

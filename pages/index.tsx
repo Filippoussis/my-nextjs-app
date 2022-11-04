@@ -5,16 +5,9 @@ import { Htag } from '../components/Htag/Htag';
 import { Text } from '../components/Text/Text';
 import { BooksIcon, CoursesIcon, GoodsIcon, ServicesIcon } from '../components/Icons';
 
-import { MenuItem } from '../interfaces/menu.interface';
+import { withLayout } from '../hocs/withLayout';
 
-interface HomeProps {
-  menu: MenuItem[];
-  firstCategory: number;
-}
-
-const Home: FC<HomeProps> = ({ menu }) => {
-  console.log('menu', menu);
-
+const Home: FC = () => {
   return (
     <>
       <Htag tag='h1'>Hello, World!</Htag>
@@ -63,7 +56,7 @@ const Home: FC<HomeProps> = ({ menu }) => {
   );
 };
 
-export default Home;
+export default withLayout(Home);
 
 export const getStaticProps: GetStaticProps = async () => {
   const firstCategory = 0;

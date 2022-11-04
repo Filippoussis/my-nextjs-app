@@ -13,7 +13,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <div className={styles.wrapper}>
       <Header className={styles.header}>Header</Header>
-      <Sidebar className={styles.sidebar}>Sidebar</Sidebar>
+      <Sidebar className={styles.sidebar} />
       <main className={styles.content}>{children}</main>
       <Footer className={styles.footer} />
     </div>
