@@ -1,12 +1,12 @@
 import { FC } from 'react';
 
-interface ProductsProps {
+interface GoodsProps {
   width?: string;
   height?: string;
   fill?: string;
 }
 
-const Products: FC<ProductsProps> = ({ width = '24', height = '24', fill = '#787D85' }) => {
+const Goods: FC<GoodsProps> = ({ width = '24', height = '24', fill = '#787D85' }) => {
   return (
     <svg
       width={width}
@@ -23,4 +23,4 @@ const Products: FC<ProductsProps> = ({ width = '24', height = '24', fill = '#787
   );
 };
 
-export default Products;
+export default Goods;
