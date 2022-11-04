@@ -1,5 +1,6 @@
-import { BooksIcon, CoursesIcon, ProductsIcon, ServicesIcon } from '../Icons';
-import { FirstLevelMenuItem } from '../../interfaces/menu.interface';
+import { FC } from 'react';
+import { BooksIcon, CoursesIcon, GoodsIcon, ServicesIcon } from '../Icons';
+import { FirstLevelMenuItem, MenuItem } from '../../interfaces/menu.interface';
 import { TopLevelCategory } from '../../interfaces/page.interface';
 
 const firstLevelMenu: FirstLevelMenuItem[] = [
@@ -13,7 +14,7 @@ const firstLevelMenu: FirstLevelMenuItem[] = [
     route: 'services',
     name: 'Сервисы',
     icon: <ServicesIcon />,
-    id: TopLevelCategory.Servises,
+    id: TopLevelCategory.Services,
   },
   {
     route: 'books',
@@ -24,8 +25,8 @@ const firstLevelMenu: FirstLevelMenuItem[] = [
   {
     route: 'products',
     name: 'Товары',
-    icon: <ProductsIcon />,
-    id: TopLevelCategory.Products,
+    icon: <GoodsIcon />,
+    id: TopLevelCategory.Goods,
   },
 ];
 
@@ -43,5 +44,6 @@ export const Menu = () => {
     });
     return items;
   };
+
   return buildFirstLevel();
 };

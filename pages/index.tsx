@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { Button } from '../components/Button/Button';
 import { Htag } from '../components/Htag/Htag';
 import { Text } from '../components/Text/Text';
-import { BooksIcon, CoursesIcon, ProductsIcon, ServicesIcon } from '../components/Icons';
+import { BooksIcon, CoursesIcon, GoodsIcon, ServicesIcon } from '../components/Icons';
 
 import { MenuItem } from '../interfaces/menu.interface';
 
@@ -57,7 +57,7 @@ const Home: FC<HomeProps> = ({ menu }) => {
         <CoursesIcon />
         <ServicesIcon />
         <BooksIcon />
-        <ProductsIcon />
+        <GoodsIcon />
       </div>
     </>
   );
