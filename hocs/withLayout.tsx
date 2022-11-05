@@ -9,7 +9,7 @@ export const withLayout = <T extends Record<string, unknown> & IAppContext>(
     return (
       <AppContextProvider
         menu={props.menu}
-        firstCategoty={props.firstCategoty}
+        firstCategory={props.firstCategory}
       >
         <Layout>
           <Component {...props} />

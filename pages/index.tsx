@@ -72,6 +72,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       menu,
+      firstCategory,
     },
   };
 };
