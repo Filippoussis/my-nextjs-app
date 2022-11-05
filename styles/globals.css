@@ -30,5 +30,7 @@ a {
   --white: #ffffff;
   --primary: #7653fc;
   --main-gray: #3b434e;
-  --light-gray: #ebebeb;
+  --second-gray: #787d85;
+  --light-gray: #dfdfdf;
+  --ultra-light-gray: #ebebeb;
 }

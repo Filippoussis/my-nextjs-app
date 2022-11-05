@@ -25,13 +25,13 @@
 }
 
 .secondary {
-  border-color: var(--light-gray);
+  border-color: var(--ultra-light-gray);
   background-color: var(--white);
   color: var(--black);
 }
 
 .secondary:hover {
-  background-color: var(--light-gray);
+  background-color: var(--ultra-light-gray);
 }
 
 .icon {

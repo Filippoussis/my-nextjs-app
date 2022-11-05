@@ -1,0 +1,55 @@
+.firstLevelLink {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: var(--second-gray);
+}
+
+.firstLevelLink:hover {
+  color: var(--primary);
+}
+
+.firstLevelLink:hover svg {
+  fill: var(--primary);
+}
+
+.firstLevelLinkActive {
+  color: var(--primary);
+}
+
+.firstLevelLinkActive svg {
+  fill: var(--primary);
+}
+
+.secondLevel {
+  position: relative;
+  padding-left: 44px;
+}
+
+.secondLevel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 11px;
+  width: 1px;
+  height: 100%;
+  background-color: var(--light-gray);
+}
+
+.secondLevelLink {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+  color: var(--second-gray);
+}
+
+.thirdLevelLink {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--second-gray);
+}

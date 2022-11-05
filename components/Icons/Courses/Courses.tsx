@@ -6,7 +6,7 @@ interface CoursesProps {
   fill?: string;
 }
 
-const Courses: FC<CoursesProps> = ({ width = '24', height = '24', fill = '#7653FC' }) => {
+const Courses: FC<CoursesProps> = ({ width = '24', height = '24', fill = '#787D85' }) => {
   return (
     <svg
       width={width}
